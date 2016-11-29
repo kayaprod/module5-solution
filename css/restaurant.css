@@ -8,6 +8,11 @@ body {
 .initial-loading {
   margin-top: 60px;
 }
+/* template sign-up*/
+input {
+  background-color: blue;
+  font-family: 'Oxygen', sans-serif;
+}
 
 /** HEADER **/
 #header-nav {
