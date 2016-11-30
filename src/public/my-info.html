@@ -1,4 +1,10 @@
 <div ui-view class="container" "col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+  <div id="info" ng-if="info.mybool == true">
+      Firstname: {{ info.data.fname}} <br>
+      Lastname : {{info.data.lname}} <br>
+      Email: {{ info.data.email}} <br>
+      Phone: {{ info.data.phone }}
+    </div>  
   <h3>{{info.name}}</h3>
   <div ng-if="info.mybool == true">
     <img width="200" height="150" ng-src="https://mykayprod-course5.herokuapp.com/images/{{info.short_name}}.jpg" alt="{{info.name}}">

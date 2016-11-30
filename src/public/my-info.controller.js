@@ -10,6 +10,7 @@ function myInfoController(MenuService,PreferencesService) {
   var description;
   var short_name;
   var mybool;
+  info.data;
 
   console.log("MyInfoController instantiate");
 
@@ -19,12 +20,14 @@ function myInfoController(MenuService,PreferencesService) {
   {
     info.mybool = true;
     console.log("Value of preferences in myInfoController",preferences);
-    info.name = preferences.name;    
+    info.name = preferences.name;
     console.log("Preference name : ",info.name);
     info.description = preferences.description;
     console.log("Preference description : ",info.description);
     info.short_name = preferences.short_name;
     console.log("short name : ",info.short_name);
+    info.data = PreferencesService.RetrieveInfo();
+    console.log("lastname in MyInfoController :",info.data.lname)
   }
   else {
          console.log("no object");
