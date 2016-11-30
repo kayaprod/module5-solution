@@ -29,10 +29,7 @@ input {
 .ng-touched.ng-invalid {
   border: 2px red solid;
 }
-/*Info */
-#info {
-  margin-top: 20px;
-}
+
 /** HEADER **/
 #header-nav {
   background-color: #f6b319;

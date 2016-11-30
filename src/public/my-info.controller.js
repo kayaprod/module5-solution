@@ -19,10 +19,8 @@ function myInfoController(MenuService,PreferencesService) {
   {
     info.mybool = true;
     console.log("Value of preferences in myInfoController",preferences);
-    info.name = preferences.name;
-    //console.log("Preference name : ",preferences.name);
+    info.name = preferences.name;    
     console.log("Preference name : ",info.name);
-    //console.log("Preference description : ",preferences.description);
     info.description = preferences.description;
     console.log("Preference description : ",info.description);
     info.short_name = preferences.short_name;
