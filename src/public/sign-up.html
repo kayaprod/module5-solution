@@ -3,7 +3,7 @@
 <div ui-view class="container">
  <form name='signUpForm' novalidate>
   <fieldset>
-     <legend><strong><span style="color:green">Newsletter :</span></strong></legend>
+     <legend><strong><span style="color:green">Registration :</span></strong></legend>
        <input type="text" name="firstname" placeholder="Your firstname"
          ng-model="signupCtrl.user.firstname"
          required
@@ -65,20 +65,20 @@
            Form valid? {{ signUpForm.$valid }}
          </div>
          <div style="margin-right: 10px;">
-           <!--Save your preferences!-->
-           <span ng-if="signupCtrl.myboolean == true" class="animate-if">
-             Save your preferences!
+           <span id="message" ng-if="signupCtrl.myboolean == true" style="color:green">Your information has been saved!</span>
+           <span id="message" ng-if="signupCtrl.myboolean == false">
+              No such menu number exits!
            </span>
          </div>
     </fieldset>
  </form>
 
-  <div id="info" ng-if="signUpForm.completed">
+  <!-- <div id="info" ng-if="signUpForm.completed">
    firstname: {{signupCtrl.user.firstname}} <br>
    lastname: {{signupCtrl.user.lastname}} <br>
    Email: {{signupCtrl.user.email}} <br>
    Phone: {{signupCtrl.user.phone }}
-  </div>
+  </div> -->
 </div>
 <!--- Fin inclusion formulaire -->
 <!--------------------------------->

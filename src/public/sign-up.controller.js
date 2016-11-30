@@ -3,12 +3,13 @@
 
 angular.module('public')
 .controller('signupController', signupController);
-signupController.$inject = ['MenuService'];
-function signupController(MenuService) {
+signupController.$inject = ['MenuService','PreferencesService'];
+function signupController(MenuService,PreferencesService) {
   var signupCtrl = this;
   var promise;
   var mypreferences = {};
-  var myboolean;
+  var myboolean = false;
+  
   console.log("signupController instantiate");
   signupCtrl.submit = function () {
     signupCtrl.completed = true;
@@ -21,13 +22,16 @@ function signupController(MenuService) {
     console.log("response", response);
     mypreferences = response;
     console.log("My preferences :", mypreferences);
+    // Save preferences
+    PreferencesService.SavePreferences(mypreferences);
     // message ok
-    myboolean = true;
+    signupCtrl.myboolean = true;
+    console.log("myboolean",signupCtrl.myboolean);
     })
     .catch(function(error){
       console.log("No such menu number exits!")
       // message Nok
-      myboolean = false;
+      signupCtrl.myboolean = false;
     });
   };
 }

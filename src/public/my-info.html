@@ -1,0 +1,11 @@
+<div ui-view class="container" "col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+  <h2>{{info.name}}</h2>
+  <!--<div class="category-tile">-->
+  <div ng-if="info.mybool == true">
+    <img width="200" height="150" ng-src="https://mykayprod-course5.herokuapp.com/images/{{info.short_name}}.jpg" alt="{{info.name}}">
+    <span>{{info.description}}</span>
+  </div>
+  <div ng-if="info.mybool == false">
+    <h3> no object<h3>
+  </div>
+</div>

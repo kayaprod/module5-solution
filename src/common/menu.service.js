@@ -35,7 +35,4 @@ function MenuService($http, ApiPath) {
       });
     }
 }
-
-
-
 })();
